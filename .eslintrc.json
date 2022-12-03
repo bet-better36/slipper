@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "rules": {
+    // セミコロンない場合、エラー出力
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
 }

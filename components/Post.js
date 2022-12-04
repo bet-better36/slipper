@@ -46,7 +46,9 @@ export default function Post({ post }) {
   async function deletePost() {
     if (window.confirm(`この投稿を削除しますか？`)) {
       deleteDoc(doc(db, 'posts', post.id));
-      deleteObject(ref(storage, `post/${post.id}/image`));
+      if (post.data().image) {
+        deleteObject(ref(storage, `post/${post.id}/image`));
+      }
     }
   }
 

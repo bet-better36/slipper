@@ -17,7 +17,6 @@ export default function signin({ providers }) {
               className="w-36 object-cover"
               width="300"
               height="300"
-              alt=""
               src="/images/slipper-logo.png"
               alt="twitter logo"
             ></Image>
